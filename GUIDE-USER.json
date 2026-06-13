@@ -1,0 +1,29 @@
+{
+  "links": [
+    {
+      "file": "client.py",
+      "dest": "~/.local/bin",
+      "name": "mc-lan-cli"
+    },
+    {
+      "file": "server.py",
+      "dest": "~/.local/bin",
+      "name": "mc-lan-ser"
+    },
+    {
+      "file": "azul.png",
+      "dest": "~/.local/share/icons/Monojo",
+      "name": "azul.png"
+    },
+    {
+      "file": "server.png",
+      "dest": "~/.local/share/icons/Monojo",
+      "name": "server.png"
+    },
+    {
+      "file": "monojo_chats_lan_client.desktop",
+      "dest": "~/.local/share/applications",
+      "name": "mc-lan-client.desktop"
+    }
+  ]
+}
