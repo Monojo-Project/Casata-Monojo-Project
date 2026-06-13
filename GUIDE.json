@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "file": "client.py",
+      "dest": "/usr/bin",
+      "name": "mc-lan-cli"
+    },
+    {
+      "file": "server.py",
+      "dest": "/usr/bin",
+      "name": "mc-lan-ser"
+    },
+    {
+      "file": "azul.png",
+      "dest": "/usr/share/icons/Monojo",
+      "name": "azul.png"
+    },
+    {
+      "file": "server.png",
+      "dest": "/usr/share/icons/Monojo",
+      "name": "server.png"
+    }
+  ]
+}
