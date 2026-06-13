@@ -23,14 +23,14 @@
       "name": "server.png"
     },
     {
-      "file": "monojo_chats_lan_client_user.desktop",
+      "file": "monojo_chats_lan_client.desktop",
       "dest": "/usr/share/applications",
-      "name": "mc-lan-client.desktop"
+      "name": "mc_lan_client.desktop"
     },
     {
-      "file": "monojo_chats_lan_server_user.desktop",
+      "file": "monojo_chats_lan_server.desktop",
       "dest": "/usr/share/applications",
-      "name": "mc-lan-server.desktop"
+      "name": "mc_lan_server.desktop"
     }
   ]
 }
