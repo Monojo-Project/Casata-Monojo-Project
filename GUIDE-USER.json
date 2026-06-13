@@ -25,12 +25,12 @@
     {
       "file": "monojo_chats_lan_client_user.desktop",
       "dest": "~/.local/share/applications",
-      "name": "mc-lan-client.desktop"
+      "name": "mc_lan_client.desktop"
     },
     {
       "file": "monojo_chats_lan_server_user.desktop",
       "dest": "~/.local/share/applications",
-      "name": "mc-lan-server.desktop"
+      "name": "mc_lan_server.desktop"
     }
   ]
 }
