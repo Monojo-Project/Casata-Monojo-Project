@@ -1,3 +1,4 @@
+#!/bin/python3
 import tkinter as tk
 from tkinter import scrolledtext, simpledialog, messagebox
 import socket
