@@ -19,7 +19,7 @@ stop_event = threading.Event()
 server_socket = None
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ICON_PATH = os.path.join(BASE_DIR, "Monojo.png")
+ICON_PATH = os.path.join(BASE_DIR, "server.png")
 NOMBRE_SALA = None
 
 # ============================
