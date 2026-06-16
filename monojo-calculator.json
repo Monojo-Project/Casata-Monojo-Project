@@ -1,0 +1,8 @@
+{
+  "name": "monojo-calculator",
+  "version": "1.0",
+  "dependencies": ["python3", "python3-tk"],
+  "size": "224,9 KiB",
+  "description": "Monojo Calculator, una simple calculadora.",
+  "usage": "Ejecuta monojo-calculator para abrir la ventana."
+}
