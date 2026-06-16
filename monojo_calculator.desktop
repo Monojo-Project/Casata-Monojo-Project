@@ -2,8 +2,7 @@
 Type=Application
 Name=Monojo Calculator
 Comment=Calculadora simple y rápida
-Exec=/home/usuario/Documentos/ALL/monojo-calculator/Monojo-Calculator-main/monojo_calculator.py
-Icon=/usr/share/icons/Monojo/naranja.png
+Exec=monojo-calculator
 Terminal=false
 Categories=Utility;Calculator;
 StartupNotify=true
