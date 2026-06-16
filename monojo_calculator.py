@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import os
 
-ICON_PATH = os.path.join(os.path.dirname(__file__), "monojo_naranja.png")
+ICON_PATH = "/usr/share/icons/Monojo/naranja.png"
 
 class Calculator(tk.Tk):
     def __init__(self):
