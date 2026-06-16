@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Monojo Calculator
+Comment=Calculadora simple y rápida
+Exec=/home/usuario/Documentos/ALL/monojo-calculator/Monojo-Calculator-main/monojo_calculator.py
+Icon=/usr/share/icons/Monojo/naranja.png
+Terminal=false
+Categories=Categories=Utility;Calculator;
+StartupNotify=true
+StartupWMClass=monojo_calculator_main

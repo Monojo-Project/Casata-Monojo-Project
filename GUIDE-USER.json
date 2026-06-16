@@ -1,0 +1,20 @@
+{
+  "links": [
+    {
+      "file": "monojo_calculator.py",
+      "dest": "~/.local/bin",
+      "name": "monojo-calculator",
+      "executable": true
+    },
+    {
+      "file": "monojo_naranja.png",
+      "dest": "~/.local/share/icons/Monojo",
+      "name": "naranja.png"
+    },
+    {
+      "file": "monojo_calculator.desktop",
+      "dest": "~/.local/share/applications",
+      "name": "monojo_calculator.desktop"
+    }
+  ]
+}
