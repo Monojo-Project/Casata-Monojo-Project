@@ -3,6 +3,7 @@ Type=Application
 Name=Monojo Calculator
 Comment=Calculadora simple y rápida
 Exec=monojo-calculator
+Icon=/usr/share/icons/Monojo/naranja.png
 Terminal=false
 Categories=Utility;Calculator;
 StartupNotify=true
