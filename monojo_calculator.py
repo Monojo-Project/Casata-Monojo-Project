@@ -30,7 +30,20 @@ class Calculator(tk.Tk):
         main_frame = ttk.Frame(self)
         main_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
-        # ========== IMAGEN (a la izquierda del resultado) ==========
+        # ========== PANTALLA (ocupa toda la parte superior) ==========
+        self.display = tk.Label(
+            main_frame,
+            text="",
+            font=("Arial", 36), # Fuente más grande para rellenar el nuevo espacio
+            anchor="e",
+            relief="sunken",
+            bg="white",
+            height=2 # Altura ajustada
+        )
+        self.display.grid(row=0, column=0, columnspan=5, rowspan=2,
+                          padx=5, pady=(5, 15), sticky="nsew")
+
+        # ========== IMAGEN (encima del botón de Ayuda) ==========
         try:
             img_original = tk.PhotoImage(file=ICON_PATH)
             self.img = img_original.subsample(
@@ -41,36 +54,25 @@ class Calculator(tk.Tk):
             self.img = None
 
         img_label = ttk.Label(main_frame, image=self.img if self.img else None)
-        img_label.grid(row=0, column=0, padx=5, pady=(5, 0), sticky="n")
+        # Ocupa las filas 2 y 3 en la columna 0
+        img_label.grid(row=2, column=0, rowspan=2, padx=5, pady=5, sticky="s")
 
-        # ========== BOTÓN DE AYUDA DEBAJO DEL MONOJO ==========
+        # ========== BOTÓN DE AYUDA (justo encima de C) ==========
         help_btn = tk.Button(
             main_frame,
-            text="Controles del teclado",
-            font=("Arial", 10),
+            text="Controles\nteclado", # Salto de línea para no ensanchar demasiado la columna
+            font=("Arial", 9),
             command=self.show_help
         )
-        help_btn.grid(row=1, column=0, padx=5, pady=5)
-
-        # ========== PANTALLA (a la derecha del Monojo) ==========
-        self.display = tk.Label(
-            main_frame,
-            text="",
-            font=("Arial", 28),
-            anchor="e",
-            relief="sunken",
-            bg="white",
-            width=14
-        )
-        self.display.grid(row=0, column=1, columnspan=5, rowspan=2,
-                          padx=5, pady=5, sticky="nsew")
+        # Se sitúa en la fila 4, columna 0
+        help_btn.grid(row=4, column=0, padx=5, pady=5, sticky="nsew")
 
         # ========== BOTONERA ==========
         botones = [
-            ["", "7", "8", "9", "÷"],
-            ["", "4", "5", "6", "×"],
-            ["", "1", "2", "3", "-"],
-            ["C", ".", "0", "^", "+"]
+            ["", "7", "8", "9", "÷"],  # Fila 2
+            ["", "4", "5", "6", "×"],  # Fila 3
+            ["", "1", "2", "3", "-"],  # Fila 4
+            ["C", ".", "0", "^", "+"]  # Fila 5
         ]
 
         for i, fila in enumerate(botones, start=2):
@@ -95,11 +97,11 @@ class Calculator(tk.Tk):
             fg="white",
             command=lambda: self.on_button("=")
         )
-        eq_button.grid(row=6, column=0, columnspan=6,
+        eq_button.grid(row=6, column=0, columnspan=5,
                        padx=4, pady=4, sticky="nsew")
 
-        # Ajustes de tamaño
-        for col in range(6):
+        # Ajustes de tamaño (5 columnas en total)
+        for col in range(5):
             main_frame.columnconfigure(col, weight=1)
         for row in range(2, 7):
             main_frame.rowconfigure(row, weight=1)
@@ -113,48 +115,31 @@ class Calculator(tk.Tk):
         if self.expression == "Error":
             self.expression = ""
 
-        # 1) NÚMEROS
         if char.isdigit():
             self.on_button(char)
             return
-
-        # 2) PUNTO
         if char == ".":
             self.on_button(".")
             return
-
-        # 3) SUMA
         if char == "+":
             self.on_button("+")
             return
-
-        # 4) RESTA
         if char == "-":
             self.on_button("-")
             return
-
-        # 5) MULTIPLICAR: Shift + X
         if key == "X":
             self.on_button("×")
             return
-
-        # 6) DIVISIÓN: Shift + punto (→ ":")
         if key == "colon":
             self.on_button("÷")
             return
-
-        # 7) PARÉNTESIS
         if char in "()":
             self.on_button(char)
             return
-
-        # 8) DELETE / BACKSPACE
         if key in ("BackSpace", "Delete"):
             self.expression = self.expression[:-1]
             self.update_display()
             return
-
-        # 9) IGUAL
         if char == "=" or key == "Return":
             self.calculate()
             return
@@ -211,7 +196,6 @@ class Calculator(tk.Tk):
             "• = o Enter → calcular\n"
         )
         messagebox.showinfo("Controles del teclado", msg)
-
 
 if __name__ == "__main__":
     app = Calculator()
