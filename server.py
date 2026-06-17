@@ -18,7 +18,7 @@ clientes_map = {}
 stop_event = threading.Event()
 server_socket = None
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = "/usr/share/icons/Monojo"
 ICON_PATH = os.path.join(BASE_DIR, "server.png")
 NOMBRE_SALA = None
 
