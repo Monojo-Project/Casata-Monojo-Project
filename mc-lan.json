@@ -1,6 +1,6 @@
 {
   "name": "mc-lan",
-  "version": "2.0",
+  "version": "2.1",
   "dependencies": ["python3", "python3-pil", "python3-tk"],
   "size": "349.4 KiB",
   "description": "Chats en LAN sin depender de servidores externos, solo de estar en la misma red. mc-lan significa Monojo Chats LAN.",
